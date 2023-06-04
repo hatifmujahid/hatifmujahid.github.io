@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardActionArea } from '@mui/material';
 import { CardContent, CardMedia, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 
 export default function Project_card(props) {
@@ -18,23 +19,32 @@ export default function Project_card(props) {
         }
         
     }
+    const StyledCard = styled(Card)({
+        width: '300px',
+        backgroundColor: '#161616',
+        color: '#808080',
+        margin: '10%',
+        transition: 'background-color 0.3s ease',
+        '&:hover': {
+          backgroundColor: '#FF0FFF',
+          color: 'white',
+        },
+      });
     return (
-        <Card >
-            <CardActionArea onClick={handleClick}>
+        <StyledCard sx={{width:'300px', backgroundColor:'#161616'}} variant="elevation" >
+            <CardActionArea onClick={handleClick} >
                 <CardMedia
-                    component="img"
-                    height="140"
                     />
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {props.title}   
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="FFFFF">
                         {description}
                     </Typography>
                 </CardContent>
             </CardActionArea>
-        </Card>
+        </StyledCard>
     );
     
 }

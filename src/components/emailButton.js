@@ -2,6 +2,7 @@ import React from 'react';
 import { EmailOutlined } from '@mui/icons-material';
 import { Fab, Grid } from '@mui/material';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import './emailButton.css'
 
 export default function EmailButton(){
@@ -13,13 +14,14 @@ export default function EmailButton(){
                 </Fab>
             </Grid>
             <Grid item>
-                        <a
-                href={"mailto:hatifmujahid08@gmail.com"}
+                    <Button
+                href="mailto:hatifmujahid08@gmail.com"
+                style={{ color: '#808080' }}
                 onMouseEnter={(e) => (e.target.style.color = 'white')}
                 onMouseLeave={(e) => (e.target.style.color = '#808080')}
                 >
                 Get In Touch
-                </a>
+                </Button>
             </Grid>
         </Grid>
     );

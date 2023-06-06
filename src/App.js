@@ -4,6 +4,10 @@ import Projects from './components/Projects.js';
 import Home from './components/Home.js';
 import { Fragment } from 'react';
 import { Box } from '@mui/system';
+import React from 'react';
+
+
+
 function App() {
   return (
     <Box>
@@ -15,6 +19,7 @@ function App() {
           </Routes>
         </Router>
       </Fragment>
+
     </Box>
   );
 }

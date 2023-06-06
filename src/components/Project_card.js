@@ -41,8 +41,7 @@ export default function Project_card(props) {
     return (
         <StyledCard sx={{width:'300px', backgroundColor:'#161616'}} variant="elevation">
             <CardActionArea onClick={handleClick} >
-                <CardMedia
-                    />
+                <CardMedia image=""/>
                     <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                         {props.title}   

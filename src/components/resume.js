@@ -9,6 +9,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   height: '100px', 
   width: '300px',
   marginTop: '50px',
+  marginLeft: '50px',
   '&:hover': {
     backgroundColor: '#ff4081',
   },
@@ -18,7 +19,7 @@ const StyledButton = styled(Button)(({ theme }) => ({
   fontSize:'20px', fontWeight:'lighter'
 }));
 
-export default function MyComponent() {
+export default function Resume() {
   return (
     <StyledButton
       component={Link}

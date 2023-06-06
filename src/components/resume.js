@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const StyledButton = styled(Button)(({ theme }) => ({
   backgroundColor: '#f50057',
+
   color: 'white',
   height: '100px', 
   width: '300px',

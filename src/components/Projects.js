@@ -1,7 +1,7 @@
 import React from 'react';
 import { Stack } from '@mui/material';
 import ProjectCard from './Project_card';
-import Navbar from './Navbar';
+import Navbar from '../assets/Navbar';
 
 export default function Projects() {
   return (

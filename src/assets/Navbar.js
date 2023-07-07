@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import EmailButton from "./emailButton";
+import EmailButton from "../components/emailButton";
 import { Square } from "@mui/icons-material";
 import SquareButtons from "./topButtons";
 import Stack from "@mui/material/Stack";

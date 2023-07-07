@@ -24,7 +24,7 @@ export default function Resume() {
   return (
     <StyledButton
       component={Link}
-      to="https://drive.google.com/file/d/1-yO3isAFhd3J8GV_eWawnuswEvRnuain/view?usp=sharing"
+      to="https://drive.google.com/file/d/1eVv3tqRd2OFzfrfcBLTgkzqfkKx_Ue7p/view?usp=sharing"
       variant="contained"
     >
       Resume

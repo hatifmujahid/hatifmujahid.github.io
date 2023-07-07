@@ -3,14 +3,18 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Routes, Route, useNavigate, Navigate, Link } from 'react-router-dom';
 import Intro from './intro';
-import Navbar from './Navbar';
+import Navbar from '../assets/Navbar';
 import Resume from './resume';
 import Stack from '@mui/material/Stack';
 import Blogs from './blogs';
-import Copyright from './footnote';
+import Copyright from '../assets/footnote';
 import myimg from '../images/IMG_9208.jpg';
 import RoundedIcons from './socials';
 import TechSkills from './tech';
+import './Home.css';
+import Arrow from '../assets/arrow';
+import Sphere from '../assets/3dSphere';
+
 
 
 export default function Home() {
@@ -43,7 +47,13 @@ export default function Home() {
               </Link>
               <Resume />
             </Stack>
+            <Stack flexDirection={'row'} >
+              <Sphere />
+              <Sphere />
+            </Stack>
+              {/* <Arrow ref='blogs'/> */}
 			<Stack flexDirection={'column'}>
+      <div style={{height:'100vh', width:'100vw'}}>
 				<h1 id='blogs' style={{ textAlign: 'center',
 
 						paddingBottom: '10px',
@@ -51,7 +61,8 @@ export default function Home() {
 						marginRight:'10%'}}>
 							Blogs</h1>
 				<Blogs />
-				
+				{/* <Arrow ref='contact-me'/> */}
+        </div>
 				<h1 id='contact-me' style={{ textAlign: 'center',
 
 						paddingBottom: '10px',

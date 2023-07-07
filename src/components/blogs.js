@@ -1,51 +1,68 @@
-import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@mui/material";
+import { Box } from "@mui/system";
+import React from "react";
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button"
+import Typography from "@mui/material/Typography";
+import CardActions from "@mui/material/CardActions";
+import CardActionArea from "@mui/material/CardActionArea";
+import Stack from "@mui/material/Stack";
 
 const blogs = [
   {
-    title: "Write up for intra-FAST CTF (Forensics and Reverse Engineering)",
-    description: "This article has writeups of challenges done by me, one of the member of the team Cyber Rizzlers, along with Wahaj Javed Alam and Agha Maarij Amir who secured runner-up spot. I will be sharing how I approached some challenges and found the flags.",
-    link: "https://medium.com/@hatifmujahid08/write-up-for-intra-fast-ctf-forensics-and-reverse-egineering-109864551bdb",
+    title: "Write up for intra-FAST CTF ",
+    description: "This article has writeups of challenges done by me, one of the member of the team Cyber Rizzlers. These are solutions to some challenges I solved.",
     img: "https://miro.medium.com/v2/resize:fit:828/0*S4q46p4J3LEeJBh_",
-    backgroundColor: '#000000',
+
   },
   {
     title: "How to make Container a button in Flutter",
     description: "As a beginner Flutter Developer I found it hard to make my apps look as fascinating as the ones I use on a daily basis, like Facebook, WhatsApp etc.",
-    link: "https://medium.com/@hatifmujahid08/how-to-make-container-a-button-in-flutter-68ca5942a59a",
     img: "https://miro.medium.com/v2/resize:fit:828/0*9G5QgA0pdu6CfBSf",
-    backgroundColor: "#000000",
+
   },
 ];
 
 export default function Blogs() {
   return (
-    <div style={{ width: "900px", height:'900px' ,  margin: "0 auto" }}>
-      <Carousel>
-        {blogs.map((blog, index) => (
-          <Paper
-            key={index}
-            elevation={3}
-            style={{
-              padding: "40px",
-              borderRadius: "10px",
-              backgroundColor: blog.backgroundColor,
-              alignContent: "center",
-              textAlign: "center",
-              alignItems: "center",
-            }}
-          >
-            <img src={blog.img} alt="blog" />
-            <br />
-            <h2 style={{fontWeight:'bold'}}>{blog.title}</h2>
-            <h3 style={{fontWeight:'light', color:'ivory'}}>{blog.description}</h3>
-            <Button variant="contained" href={blog.link} target="_blank">
-              Read More
-            </Button>
-          </Paper>
-        ))}
-      </Carousel>
-    </div>
+    <div style={{display: "flex", justifyContent: "center", alignItems: "center" }}>
+  <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", justifyItems: "center" }}>
+      {blogs.map((blog) => (
+        <Stack column sx={{margin:'10px'}}>
+        <Card sx={{ width: '600px', backgroundColor:'	#5D3FD3' }}>
+          <CardActionArea>
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {blog.title}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                style={{ color: "black" }}
+              >
+                {blog.description}
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="large"
+                style={{ color: "white", backgroundColor: "black" }}
+                href={blog.link}
+              >
+                Read More
+              </Button>
+            </CardActions>
+          </CardActionArea>
+        </Card>
+        </Stack>
+      ))}
+  </Box>
+  
+
+</div>
+
   );
 }
 

@@ -9,8 +9,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
   color: 'white',
   height: '100px', 
   width: '300px',
-  marginTop: '50px',
-  marginLeft: '50px',
+  borderRadius: '10px',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
   '&:hover': {
     backgroundColor: '#ff4081',
   },

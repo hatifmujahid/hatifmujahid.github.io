@@ -1,7 +1,8 @@
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 import { useFrame } from '@react-three/fiber';
-
+import axios from 'axios';
+import { Modal } from '@mui/material';
 
 
 export default function Sphere() {
@@ -14,19 +15,27 @@ export default function Sphere() {
     );
 }
 
-function Cylinder(props) {
+
+function Cylinder(props){
     // This reference will give us direct access to the mesh
     const mesh = React.useRef();
 
     // Set up state for the hovered and active state
     const [hovered, setHover] = React.useState(false);
-    const [active, setActive] = React.useState(false);
+    const [active, setActive] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
+    const  handleOpen  = async() =>{
+        setOpen(true);
+        setHover(false);
+    }    
+    const handleClose = () => setOpen(false);
 
     // Rotate mesh every frame, this is outside of React without
     // rendering, so the canvas will not redraw every frame
 
     
     useFrame((state, delta) => (mesh.current.rotation.x += 0.01));
+    
 
     return (
         <mesh
@@ -34,13 +43,13 @@ function Cylinder(props) {
             ref={mesh}
             scale={active ? [1.5, 1.5, 1.5] : [1, 1, 1]}
             onClick={()=>{
-                setActive(!active);
+                handleOpen()
             }}
             onPointerEnter={() => setHover(true)}
             onPointerLeave={() => setHover(false)}
         >
-            <sphereGeometry args={[1, 10, 10]} />
-            <meshStandardMaterial color={hovered ? '#5D3FD3' : 'orange'} wireframe={props.wireframe}/>
+            <sphereGeometry args={[1, 15, 15]} />
+            <meshStandardMaterial color={hovered ? '#5D3FD3' : 'biege'} wireframe={props.wireframe}/>
         </mesh>
     );
 }

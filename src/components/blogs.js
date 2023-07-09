@@ -27,7 +27,13 @@ const blogs = [
 
 export default function Blogs() {
   return (
-    <div style={{display: "flex", justifyContent: "center", alignItems: "center" }}>
+    <div style={{justifyContent: "center", alignItems: "center" }}>
+    <h1 id='blogs' style={{ textAlign: 'center',
+
+        paddingBottom: '10px',
+        marginLeft:'10%',
+        marginRight:'10%'}}>
+          Blogs</h1>
   <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", justifyItems: "center" }}>
       {blogs.map((blog) => (
         <Stack column sx={{margin:'10px'}}>

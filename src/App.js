@@ -15,11 +15,9 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Projects" element={<Projects />} />
           </Routes>
         </Router>
       </Fragment>
-
     </Box>
   );
 }

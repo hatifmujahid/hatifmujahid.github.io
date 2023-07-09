@@ -1,0 +1,19 @@
+.dialog-paper {
+    width: 400px;
+    border-radius: 8px;
+    background-color: #060000;
+    padding: 16px;
+    color: #000;
+  }
+.quote-heading{
+    font-size: 30px;
+    font-weight: 600;
+    color: #0a0606;
+    margin-bottom: 10px;
+}
+.quote-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000a6;
+    margin-bottom: 10px;
+}

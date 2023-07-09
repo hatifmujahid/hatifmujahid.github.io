@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { Routes, Route, useNavigate, Navigate, Link } from 'react-router-dom';
 import Intro from './intro';
 import Navbar from '../assets/Navbar';
 import Resume from './resume';
@@ -12,57 +11,63 @@ import myimg from '../images/IMG_9208.jpg';
 import RoundedIcons from './socials';
 import TechSkills from './tech';
 import './Home.css';
-import Arrow from '../assets/arrow';
 import Sphere from '../assets/3dSphere';
+import Project from './Projects';
+import { useState } from 'react';
+import axios from 'axios';
+import { Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 
 
 
 export default function Home() {
+  const [randomQuote, setRandomQuote] = useState('');
+  const handleClick = async () => {
+    try {
+      const response = await axios.get('https://type.fit/api/quotes');
+      const randomIndex = Math.floor(Math.random() * response.data.length);
+      setRandomQuote(response.data[randomIndex].text);
+    } catch (error) {
+      console.log('Error fetching quote:', error);
+    }
+    setOpen(true);
+  };
+  const [open, setOpen] = React.useState(false);
+  const handleClose = () => setOpen(false);
+
+  
+
   return (
     <Box>
       <Navbar />
-      <Stack flexDirection={'column'}>
+      <Stack flexDirection={'column'} >
           <Intro />
-          <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'} margin={'20px'}>
-              <Link to="/Projects" style={{ textDecoration: 'none' }}>
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: '#f50057',
-                    color: 'white',
-                    height: '100px', 
-                    width: '300px',
-                    marginTop: '50px',
-                    '&:hover': {
-                      backgroundColor: '#ff4081',
-                    },
-                    '&:hover, &:focus': {
-                      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-                    },
-                    fontSize:'20px', fontWeight:'lighter'
-                  }}
-                >
-                  Projects
-                </Button>
-              </Link>
-              <Resume />
+          <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <Resume />
+          </div>
+            <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'} >
+              <div onClick={handleClick} style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+                <Sphere />
+              </div>
+              {/* <Button onClick={handleClick}>Open simple snackbar</Button> */}
+              <div className="dialog">
+                <Dialog open={open} onClose={handleClose} classes={{ paper: 'dialog-paper' }} >
+                  <DialogTitle><h1 className='quote-heading'>Random Quote</h1></DialogTitle>
+                  <DialogContent>
+                    <DialogContentText><p className='quote-text'>{randomQuote}</p></DialogContentText>
+                  </DialogContent>
+                  <DialogActions>
+                    <Button onClick={handleClose}>Close</Button>
+                  </DialogActions>
+                </Dialog>
+              </div>
+
             </Stack>
-            <Stack flexDirection={'row'} >
-              <Sphere />
-              <Sphere />
-            </Stack>
-              {/* <Arrow ref='blogs'/> */}
+
+      <Project />
 			<Stack flexDirection={'column'}>
       <div style={{height:'100vh', width:'100vw'}}>
-				<h1 id='blogs' style={{ textAlign: 'center',
-
-						paddingBottom: '10px',
-						marginLeft:'10%',
-						marginRight:'10%'}}>
-							Blogs</h1>
 				<Blogs />
-				{/* <Arrow ref='contact-me'/> */}
-        </div>
+      </div>
 				<h1 id='contact-me' style={{ textAlign: 'center',
 
 						paddingBottom: '10px',

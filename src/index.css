@@ -19,6 +19,7 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+    font-family: 'Gotham', cursive;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

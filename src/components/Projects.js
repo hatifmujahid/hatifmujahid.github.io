@@ -1,6 +1,5 @@
 import React from 'react';
 import { Stack } from '@mui/material';
-import Navbar from '../assets/Navbar';
 import './projects.css';
 import { useEffect } from "react";
 
@@ -28,28 +27,53 @@ export default function Projects() {
       }
     };
   }, []);
+  const handleclick = (e) => {
+   
+    if(e.target.innerText === 'Inventory Management System'){
+      window.open(' https://github.com/hatifmujahid/DS-Project.cpp', '_blank');
+    }
+    else if(e.target.innerText === 'Spam Email Classifier'){
+      window.open('https://github.com/hatifmujahid/Spam-Mail-Classification' , '_blank');
+
+    }
+    else if(e.target.innerText === 'Pwned Passwords'){
+      window.open('https://github.com/hatifmujahid/Pwned-Passwords' , '_blank');
+
+    }
+    else if(e.target.innerText === 'Weather App'){
+      window.open('https://weatherapp-nu-beryl.vercel.app', '_blank');
+
+    }
+    else if(e.target.innerText === 'Anime Reviews'){
+      window.open('https://github.com/hatifmujahid/anime-reviews' , '_blank');
+    }
+    else if(e.target.innerText === 'Portfolio Website'){
+      window.open('https://github.com/hatifmujahid/hatifmujahid.github.io' , '_blank');
+    }
+  }
+
   return (
-    <div>
+    <div style={{width:'100vw', height:'100vh',marginTop:'200px'}}>
       <h1 className="heading">Projects</h1>
       <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
-      <div className="card">
+      <div className="card" onClick={handleclick}>
         <p>Inventory Management System</p>  
       </div>    
-      <div className="card">
-        <p>Spam Email Classifier</p>  
-      </div>    
-      <div className="card">
+    <div className="card" onClick={handleclick}>
+      <p>Spam Email Classifier</p>  
+    </div>    
+      <div className="card" onClick={handleclick} >
         <p>Pwned Passwords</p>  
       </div>  
       </Stack>  
       <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
-        <div className="card">
+        <div className="card" onClick={handleclick}>
           <p>Weather App</p>  
         </div>    
-        <div className="card">
+        <div className="card" onClick={handleclick}>
           <p>Anime Reviews</p>  
         </div>    
-        <div className="card">
+        <div className="card" onClick={handleclick}>
           <p>Portfolio Website</p>  
         </div>  
       </Stack>    

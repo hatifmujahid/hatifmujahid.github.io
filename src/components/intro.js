@@ -1,10 +1,7 @@
 import React from 'react';
-import { Grid } from '@mui/material';
-import mygif from '../images/hand.gif';
 import mycat from '../images/y7.gif';
 import './intro.css'
-import emoji from 'react-easy-emoji'
-import Stack from '@mui/material/Stack';
+
 
 export default function Intro() {
   const letters = "abcdefghijklmnopqrstuvwxyz".split("");
@@ -30,12 +27,12 @@ export default function Intro() {
   return (
     <div className="intro-container">
       <div className="intro-text">
-        <h1 onMouseOver={handleMouseover} data-value="Hi there,I am Muhammad Hatif Mujahid">Hi there,I am Muhammad Hatif Mujahid
+        <h1 onMouseOver={handleMouseover} data-value="Hi there, I am Muhammad Hatif Mujahid">Hi there, I am Muhammad Hatif Mujahid
         </h1>
         
-        <h2><span className='magic'>A passionate Full Stack Developer</span></h2>
-        <h2><span className='magic'>Have built web and mobile applications</span></h2>
-        <h2><span className='magic'>React | Flutter | C++ | Python </span></h2>
+        <h2><span className='magic'>MERN Full Stack Developer</span></h2>
+        <h2><span className='magic'>Building web and mobile applications with love </span></h2>
+        <h2><span className='magic'>React | Flutter | C++ | Python | Express.js | Node.js</span></h2>
         <h2><span className='magic'>Passsionately pursuing CyberSecurity</span></h2>
       </div>
       <div className="intro-gif">

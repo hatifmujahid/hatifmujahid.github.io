@@ -2,7 +2,6 @@
     width: 400px;
     border-radius: 8px;
     background-color: #060000;
-    padding: 16px;
     color: #000;
   }
 .quote-heading{
@@ -16,4 +15,15 @@
     font-weight: 400;
     color: #000000a6;
     margin-bottom: 10px;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+}
+.word{
+    color:white;
+    font-size: 70px;
+    font-family: 'Rubik', sans-serif;
+    margin: 0rem;
+    text-transform: uppercase;
 }

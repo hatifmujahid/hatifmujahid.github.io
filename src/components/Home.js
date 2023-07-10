@@ -39,13 +39,16 @@ export default function Home() {
   return (
     <Box>
       <Navbar />
+      <div>
+        
+      </div>
       <Stack flexDirection={'column'} >
           <Intro />
           <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
             <Resume />
           </div>
             <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'} >
-              <div onClick={handleClick} style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+              <div onClick={handleClick} style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
                 <Sphere />
               </div>
               {/* <Button onClick={handleClick}>Open simple snackbar</Button> */}
@@ -60,7 +63,6 @@ export default function Home() {
                   </DialogActions>
                 </Dialog>
               </div>
-
             </Stack>
 
       <Project />
@@ -75,17 +77,28 @@ export default function Home() {
 						marginRight:'10%'}}>
 							About Me</h1>
 				<Stack flexDirection={{ xs: 'column', md: 'row' }} sx={{ display: 'flex' }}>
-					<div style={{ marginLeft: '10%', marginRight: '30px'}}>
-						<h2 style={{fontSize:'80px', color:'white'}}>Reach out to me</h2>
-						<h2 style={{color:'white'}}>DISCUSS A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL.</h2>
-						<h2 style={{fontWeight:'bold', color:'white'}}>"Cyber Secuity Enthusiast| MERN stack Developer | Still Finding 💭 "</h2>
-						<h2 style={{color:'white'}}>📍Karachi, Pakistan</h2>
-						<h2 style={{color:'white'}}>Open for opportunities: YES</h2>
+        <div style={{ marginLeft: '10%', marginRight: '30px'}}>
+						<div className="text">
+              <div className="line">
+                <p className="word">Email</p>
+                <p className="word">Social</p>
+              </div>
+              <div className="line">
+                <p className="word">A</p>
+                <p className="word">Developer</p>
+              </div>
+              <div className="line">
+                <p className="word">@</p>
+                <p className="word">FAST NUCES</p>
+              </div>
+              <div className="line">
+                <p className="word">&</p>
+                <p className="word">Problem Solver</p>
+              </div>
+            </div>
 					</div>
-					<img src={myimg} alt="myself" style={{ width: '400px', border: '5px solid teal', display: 'flex', marginLeft:'40px'}} />
 				</Stack>
-				<h2 style={{color:'white', marginLeft:'10%', marginRight:'10%',marginBottom:'10px', fontWeight:'bolder', fontSize:'50px'}}>Technologies I use</h2>
-				<TechSkills/>
+				
 				<h2 style={{ textAlign: 'center', color:'white', marginLeft:'10%', marginRight:'10%'}}>Let's Connect</h2>
 			</Stack>
         </Stack>

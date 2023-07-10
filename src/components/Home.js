@@ -50,12 +50,18 @@ export default function Home() {
           <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
           </div>
             <Stack flexDirection={'column'} justifyContent={'center'} alignItems={'center'} >
-              <div onClick={handleClick} style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}}>
+              <div onClick={handleClick} style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop:'30px'}} title='Press me! :)'>
                 <Sphere />
               </div>
             <Resume />
 			<a href="#contact-me" style={{textDecoration:'none', color:'white'}}>
-            <ArrowCircleDownIcon color='primary' style={{ textAlign: "center", marginTop: "20px", cursor: "pointer", width: "50px", height: "50px" }}/>
+            <div className="arrow-wrapper">
+					<ArrowCircleDownIcon
+					color="white"
+					className="arrow-icon"
+					sx={{  marginTop:'10px', width: '50px', height: '50px', '&:hover': { color: '#f50057' } }}
+					/>
+				</div>
             </a>
               <div className="dialog">
                 <Dialog open={open} onClose={handleClose} classes={{ paper: 'dialog-paper' }} >
@@ -83,7 +89,8 @@ export default function Home() {
           <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'} >
             <Project />
           </Stack>
-          <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'} >
+          <Stack flexDirection={'column'} justifyContent={'center'} alignItems={'center'} >
+			<h1 style={{ textAlign: 'center',marginTop:'50px'}}>Certifications</h1>
             <Certifications />
           </Stack>
           <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'} >

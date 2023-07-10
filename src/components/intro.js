@@ -34,6 +34,8 @@ export default function Intro() {
         <h2><span className='magic'>Building web and mobile applications with love </span></h2>
         <h2><span className='magic'>React | Flutter | C++ | Python | Express.js | Node.js</span></h2>
         <h2><span className='magic'>Passsionately pursuing CyberSecurity</span></h2>
+        <h2><span className='magic'>Open Source Enthusiast</span></h2>
+        <h2><span className='magic'>I don't stop until it's perfect! this website is still being built. Stay tuned :D</span></h2>
       </div>
       
     </div>

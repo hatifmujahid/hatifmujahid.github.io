@@ -18,7 +18,7 @@ const mouseLeave1 = () => {
     document.querySelector(".fancy1").style.opacity = 1;
 };
   return (
-    <div className='resume' style={{marginTop:'80px', marginBottom:'20px'}}>
+    <div className='resume' style={{marginTop:'80px', marginBottom:'20px'}} title='Check out my resume!'>
       <a className='fancy3' href='https://drive.google.com/file/d/1eVv3tqRd2OFzfrfcBLTgkzqfkKx_Ue7p/view?usp=drive_link'>
         <span className="letter">R</span>
         <span className="letter">E</span>

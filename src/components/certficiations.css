@@ -1,0 +1,29 @@
+.screen{
+    width: 500px;
+    border: 3px solid rgb(50, 50, 235);
+    aspect-ratio: 10 /16;
+    border-radius: 1rem;
+    background-color: rgb(190, 238, 177);
+    overflow: hidden;
+}
+.screen-overlay {
+    background: linear-gradient(
+        #e66465,
+        #e66465 10px,
+        #9198e5 10px,
+        #9198e5 20px
+    );
+    height: 100%;
+    width: 100%;
+    background-size: 100% 40px;
+    animation: pan-overlay 22s linear infinite; 
+    
+}
+@keyframes pan-overlay{
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 0% -100%;
+    }
+}

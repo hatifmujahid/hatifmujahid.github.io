@@ -13,15 +13,15 @@
     
 }
 
-.fancy3:hover > :nth-child(1){
+.fancy3:hover > :nth-child(5){
     transform: translate(-80%, 60%) rotate(8deg);
     transition: 0.5s;
 }
-.fancy3:hover > :nth-child(2){
+.fancy3:hover > :nth-child(4){
     transform: translate(-40%, 20%) rotate(4deg);
     transition: 0.5s;
 }
-.fancy3:hover > :nth-child(3){
+.fancy3:hover > :nth-child(2){
     transform: translate(-10%, 60%) rotate(-6deg);
     transition: 0.5s;
 }
@@ -29,11 +29,11 @@
     transform: translate(0%, 8%) rotate(-8deg);
     transition: 0.5s;
 }
-.fancy3:hover > :nth-child(5){
+.fancy3:hover > :nth-child(3){
     transform: translate(0%, -20%) rotate(-3deg);
     transition: 0.5s;
 }
-.fancy3:hover > :nth-child(6){
+.fancy3:hover > :nth-child(1){
     transform: translate(0%, 20%) rotate(-3deg);
     transition: 0.5s;
 }

@@ -2,6 +2,12 @@ import React from 'react';
 import { Stack } from '@mui/material';
 import './projects.css';
 import { useEffect } from "react";
+import pwned from '../images/pwned.png';
+import ivms from '../images/ivms.png';
+import sudoku from '../images/sudoku.png';
+import spam from '../images/spam.png';
+import portfolio from '../images/portfolio.png';
+
 
 const handleMouseOver = (e) => {
   const target = e.currentTarget;
@@ -53,17 +59,19 @@ export default function Projects() {
   }
 
   return (
-    <div style={{width:'100vw', height:'100vh',marginTop:'200px'}}>
+    <div style={{marginTop:'200px'}} id='projects'>
       <h1 className="heading">Projects</h1>
       <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
       <div className="card" onClick={handleclick}>
+        <img src={ivms} alt="" className="image" />
         <p>Inventory Management System</p>  
       </div>    
     <div className="card" onClick={handleclick}>
+      <img src={spam} alt="" className="image" />
       <p>Spam Email Classifier</p>  
     </div>    
       <div className="card" onClick={handleclick} >
-        <p>Pwned Passwords</p>  
+        <p>Airline Ticket Reservation</p>  
       </div>  
       </Stack>  
       <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
@@ -74,40 +82,23 @@ export default function Projects() {
           <p>Anime Reviews</p>  
         </div>    
         <div className="card" onClick={handleclick}>
+          <img src={portfolio} alt="" className="image" />
           <p>Portfolio Website</p>  
         </div>  
-      </Stack>    
+      </Stack>
+      <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
+        <div className="card" onClick={handleclick}>
+          <img className="image" src={pwned} alt="react" />
+          <p>Pwned Password</p>  
+        </div>    
+        <div className="card" onClick={handleclick}>
+          <p>Image Recognition</p>  
+        </div> 
+        <div className="card" onClick={handleclick}>
+          <img src={sudoku} alt="" className="image" />
+          <p>Sudoku Solver</p>  
+        </div> 
+      </Stack>   
     </div>
   );
 }
-{/* <Stack flexDirection={'column'} justifyContent={'center'} alignItems={'center'} margin={'20px'} > */}
-{/* <Stack flexDirection={'row'}>
-        <a href="https://github.com/hatifmujahid/DS-Project.cpp" style={{ textDecoration: 'none' }}>
-          <img src="https://github-readme-stats-ashy-ten-42.vercel.app/api/pin/?username=hatifmujahid&repo=DS-Project.cpp&theme=dark" style={{ margin: '20px', transition: 'box-shadow 0.3s' }} />
-        </a>
-
-        <a href="https://github.com/hatifmujahid/Airline-Ticket_Reservation" style={{ textDecoration: 'none' }}>
-          <img src="https://github-readme-stats-ashy-ten-42.vercel.app/api/pin/?username=hatifmujahid&repo=Airline-Ticket_Reservation&theme=dark" style={{ margin: '20px', transition: 'box-shadow 0.3s' }} />
-        </a>
-
-        <a href="https://github.com/hatifmujahid/Inventory-Management-System-PERN" style={{ textDecoration: 'none' }}>
-          <img src="https://github-readme-stats-ashy-ten-42.vercel.app/api/pin/?username=hatifmujahid&repo=Inventory-Management-System-PERN&theme=dark" style={{ margin: '20px', transition: 'box-shadow 0.3s' }} />
-        </a>
-
-        </Stack>
-        <Stack flexDirection={'row'}>
-        <a href="https://github.com/hatifmujahid/Spam-Mail-Classification">
-          <img src="https://github-readme-stats-ashy-ten-42.vercel.app/api/pin/?username=hatifmujahid&repo=Spam-Mail-Classification&theme=dark" style={{ margin: '20px', transition: 'box-shadow 0.3s' }} />
-        </a>
-
-        <a href="https://github.com/hatifmujahid/anime-reviews">
-          <img src="https://github-readme-stats-ashy-ten-42.vercel.app/api/pin/?username=hatifmujahid&repo=anime-reviews&theme=dark" style={{ margin: '20px', transition: 'box-shadow 0.3s' }} />
-        </a>
-
-        <a href="https://github.com/hatifmujahid/hatifmujahid.github.io">
-          <img src="https://github-readme-stats-ashy-ten-42.vercel.app/api/pin/?username=hatifmujahid&repo=hatifmujahid.github.io&theme=dark" style={{ margin: '20px', transition: 'box-shadow 0.3s' }} />
-        </a>
-
-
-        </Stack> */}
-      {/* </Stack>   */}

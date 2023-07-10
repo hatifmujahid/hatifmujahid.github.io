@@ -3,6 +3,7 @@ import { EmailOutlined } from '@mui/icons-material';
 import { Fab, Grid } from '@mui/material';
 import Button from '@mui/material/Button';
 import './emailButton.css';
+import logo from '../images/logo.png';
 
 export default function EmailButton() {
   return (
@@ -13,40 +14,7 @@ export default function EmailButton() {
       alignItems={'center'}
 >
       <Grid item>
-        <Fab
-          disabled
-          sx={{
-            backgroundColor: '#161616',
-            outlineColor: '#808080',
-            outlineWidth: '10px',
-            height: '80px',
-            width: '80px',
-            display: 'flex',
-            marginBottom: '20px',
-            marginTop: '20px',
-          }}
-        >
-          <EmailOutlined
-            disabled
-            sx={{
-              backgroundColor: '#161616',
-              color: '#FFFFFF',
-              borderRadius: 28,
-              height: '30px',
-              width: '30px',
-            }}
-          />
-        </Fab>
-      </Grid>
-      <Grid item>
-        <Button
-          href="mailto:hatifmujahid08@gmail.com"
-          style={{ color: '#808080' }}
-          onMouseEnter={(e) => (e.target.style.color = 'white')}
-          onMouseLeave={(e) => (e.target.style.color = '#808080')}
-        >
-          Get In Touch
-        </Button>
+        <img src={logo} alt="email" width={'200px'} height={'120px'} />
       </Grid>
       <Grid item>
         <Button

@@ -16,14 +16,12 @@
     color: #000000a6;
     margin-bottom: 10px;
 }
-.line{
-    display: flex;
-    justify-content: space-between;
-}
-.word{
-    color:white;
-    font-size: 70px;
-    font-family: 'Rubik', sans-serif;
-    margin: 0rem;
-    text-transform: uppercase;
-}
+.intro-part {
+    opacity: 0;
+    transition: opacity 0.8s;
+  }
+  
+  .intro-part.visible {
+    opacity: 1;
+  }
+

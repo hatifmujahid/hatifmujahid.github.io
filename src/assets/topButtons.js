@@ -16,9 +16,9 @@ export default function SquareButtons() {
           style={{ color: '#808080', width:'200px'}}
           onMouseEnter={(e) => (e.target.style.backgroundColor = 'red', e.target.style.color = 'white')}
           onMouseLeave={(e) => (e.target.style.backgroundColor = '', e.target.style.color = '#808080')}
-          href='#blogs'
+          href='#projects'
         >
-          Blogs
+          Projects
         </Button>
         <Button
           style={{ color: '#808080', width:'200px'}}

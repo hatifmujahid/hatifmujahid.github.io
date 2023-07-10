@@ -24,10 +24,10 @@ h2{
   animation: background-pan 1.5s linear infinite;
   background: linear-gradient(
     to right,
-    purple,
-    violet,
     rgb(255, 255, 255),
-    purple
+    rgb(82, 82, 82),
+    rgb(27, 27, 27),
+    rgb(104, 185, 89)
   );
   background-size: 200%;
   -webkit-background-clip: text;

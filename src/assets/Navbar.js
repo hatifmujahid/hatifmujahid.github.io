@@ -23,7 +23,6 @@ export default function Navbar() {
                     marginLeft: '10%',
                     border: 'none',
                     display: 'flex',
-                    marginBottom: '20px',
                 }}>
             </div>
             

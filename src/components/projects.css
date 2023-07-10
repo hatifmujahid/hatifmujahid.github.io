@@ -3,12 +3,20 @@
 .card {
     background-color: rgba(0, 0, 0, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    height: 260px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     border-radius: 10px;
     cursor: pointer;
     margin: 10px;
     position: relative;
+}
+.image{
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .card:hover::before {
     opacity: 1;
@@ -16,7 +24,7 @@
 .card::before {
     background: radial-gradient(
         800px circle at var(--mouse-x) var(--mouse-y),
-        rgb(255, 255, 255,0.06),
+        rgba(255, 255, 255, 0.338),
         transparent 40%
     );
     border-radius: inherit;
@@ -40,6 +48,6 @@
     color: #fff;
     padding-left: 10%;
     font-family: 'MonoLisa', monospace;
-    padding-top: 35%;
+    margin-top: 80%;
     font-weight: bold;
 }

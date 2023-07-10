@@ -1,34 +1,34 @@
 import React from 'react';
-import { Button } from '@mui/material';
-import { styled } from '@mui/system';
-import { Link } from 'react-router-dom';
+import './resume.css';
 
-const StyledButton = styled(Button)(({ theme }) => ({
-  backgroundColor: '#f50057',
-
-  color: 'white',
-  height: '100px', 
-  width: '300px',
-  borderRadius: '10px',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-  '&:hover': {
-    backgroundColor: '#ff4081',
-  },
-  '&:hover, &:focus': {
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
-  },
-  fontSize:'20px', fontWeight:'lighter'
-}));
 
 export default function Resume() {
+  const mouseEnter1 = () => {
+    const elements = document.querySelectorAll(".word");
+    elements.forEach((element) => {
+        element.style.opacity = 0.2;
+    });
+    document.querySelector(".fancy1").style.opacity = 0.2;
+};
+const mouseLeave1 = () => {
+    const elements = document.querySelectorAll(".word");
+    elements.forEach((element) => {
+        element.style.opacity = 1;
+    });
+    document.querySelector(".fancy1").style.opacity = 1;
+};
   return (
-    <StyledButton
-      component={Link}
-      to="https://drive.google.com/file/d/1eVv3tqRd2OFzfrfcBLTgkzqfkKx_Ue7p/view?usp=sharing"
-      variant="contained"
-    >
-      Resume
-    </StyledButton>
+    <div className='resume' style={{marginTop:'80px', marginBottom:'20px'}}>
+      <a className='fancy3' href='https://drive.google.com/file/d/1eVv3tqRd2OFzfrfcBLTgkzqfkKx_Ue7p/view?usp=drive_link'>
+        <span className="letter">R</span>
+        <span className="letter">E</span>
+        <span className="letter">S</span>
+        <span className="letter">U</span>
+        <span className="letter">M</span>
+        <span className="letter">E</span>
+      </a>
+    </div>
+
   );
 }
 
